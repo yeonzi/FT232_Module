@@ -1,0 +1,102 @@
+#A4図面を作成する
+#輪郭線の太さは1.4mmを原則とする。
+Set Wire_Bend 2;
+Grid mm;
+Layer   1 Top;
+Layer  16 Bottom;
+Layer  17 Pads;
+Layer  18 Vias;
+Layer  19 Unrouted;
+Layer  20 Dimension;
+Layer  21 tPlace;
+Layer  22 bPlace;
+Layer  23 tOrigins;
+Layer  24 bOrigins;
+Layer  25 tNames;
+Layer  26 bNames;
+Layer  27 tValues;
+Layer  28 bValues;
+Layer  29 tStop;
+Layer  30 bStop;
+Layer  31 tCream;
+Layer  32 bCream;
+Layer  33 tFinish;
+Layer  34 bFinish;
+Layer  35 tGlue;
+Layer  36 bGlue;
+Layer  37 tTest;
+Layer  38 bTest;
+Layer  39 tKeepout;
+Layer  40 bKeepout;
+Layer  41 tRestrict;
+Layer  42 bRestrict;
+Layer  43 vRestrict;
+Layer  44 Drills;
+Layer  45 Holes;
+Layer  46 Milling;
+Layer  47 Measures;
+Layer  48 Document;
+Layer  49 Reference;
+Layer  51 tDocu;
+Layer  52 bDocu;
+Layer  91 Nets;
+Layer  92 Busses;
+Layer  93 Pins;
+Layer  94 Symbols;
+Layer  95 Names;
+Layer  96 Values;
+Layer  97 Info;
+Layer  98 Guide;
+# Layer   4 Route4;
+# Layer   5 Route5;
+# Layer   6 Route6;
+# Layer   7 Route7;
+# Layer   8 Route8;
+# Layer   9 Route9;
+# Layer  10 Route10;
+# Layer  11 Route11;
+# Layer  12 Route12;
+# Layer  13 Route13;
+# Layer  14 Route14;
+# Layer  15 Route15;
+# Layer   2 Route2;
+# Layer   3 Route3;
+
+#図面
+Layer 94;
+Frame 6 4 LEFT TOP RIGHT BOTTOM (0 0) (277 190);
+
+#表題欄
+Layer 94;
+Wire 0.14 (182 3.8) (182 23.8) (273.2 23.8);
+Wire 0.14 (233.2 23.8) (233.2 3.8);
+
+Wire 0.14 (233.2 17) (273.2 17);
+Wire 0.14 (233.2 12) (273.2 12);
+Wire 0.14 (233.2 7)  (273.2 7);
+
+Wire 0.14 (265 7) (265 3.8)
+
+#表題
+        Layer 94;
+        Change Size 2.54;
+        Change Align center left;
+        Text '>DRAWING_NAME' R0 (234 14.5);
+
+#作者
+        Layer 94;
+        Change Size 2.54;
+        Change Align center left;
+        Text 'Author:' R0 (234 9.5);
+
+#修正時間
+        Layer 94;
+        Change Size 2;
+        Change Align center left;
+        Text '>LAST_DATE_TIME' R0 (234 5.3);
+
+#ページ
+        Layer 94;
+        Change Size 2;
+        Change Align center right;
+        Text '>SHEET' R0 (272.7 5.3);
