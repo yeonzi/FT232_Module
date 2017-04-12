@@ -95,15 +95,6 @@
 <wire x1="2.6" y1="-4.85" x2="2.6" y2="4.85" width="0.127" layer="21"/>
 <wire x1="-0.5" y1="4.85" x2="0.5" y2="4.85" width="0.127" layer="21" curve="180"/>
 </package>
-<package name="USB_SMD">
-<smd name="D-" x="-1" y="0" dx="1.6" dy="5.2" layer="1" roundness="62"/>
-<smd name="D+" x="1" y="0" dx="1.6" dy="5.2" layer="1" roundness="62"/>
-<smd name="VCC" x="-3.5" y="0" dx="2.5" dy="6.8" layer="1" roundness="62"/>
-<smd name="GND" x="3.5" y="0" dx="2.5" dy="6.8" layer="1" roundness="62"/>
-<wire x1="-6" y1="-5" x2="-6" y2="4.238" width="0.127" layer="20"/>
-<wire x1="-6" y1="4.238" x2="6" y2="4.238" width="0.127" layer="20"/>
-<wire x1="6" y1="4.238" x2="6" y2="-5" width="0.127" layer="20"/>
-</package>
 <package name="CON4">
 <pad name="P$1" x="0" y="0" drill="1.016" diameter="2.032"/>
 <pad name="P$2" x="2.54" y="0" drill="1.016" diameter="2.032"/>
@@ -208,6 +199,36 @@
 <rectangle x1="-0.1001" y1="-0.4001" x2="0.1001" y2="0.4001" layer="35"/>
 <rectangle x1="-1.524" y1="-0.762" x2="1.524" y2="0.762" layer="39"/>
 </package>
+<package name="USB_SMD">
+<smd name="D-" x="-1" y="0" dx="1.6" dy="5.2" layer="1" roundness="62"/>
+<smd name="D+" x="1" y="0" dx="1.6" dy="5.2" layer="1" roundness="62"/>
+<smd name="VCC" x="-3.5" y="0" dx="2.5" dy="6.8" layer="1" roundness="62"/>
+<smd name="GND" x="3.5" y="0" dx="2.5" dy="6.8" layer="1" roundness="62"/>
+<wire x1="-6" y1="-5" x2="-6" y2="4.238" width="0.127" layer="20"/>
+<wire x1="-6" y1="4.238" x2="6" y2="4.238" width="0.127" layer="20"/>
+<wire x1="6" y1="4.238" x2="6" y2="-5" width="0.127" layer="20"/>
+</package>
+<package name="USB_A">
+<smd name="GND" x="-3.5" y="2.75" dx="1.1" dy="2.5" layer="1"/>
+<smd name="D+" x="-1" y="2.75" dx="1.1" dy="2.5" layer="1"/>
+<smd name="D-" x="1" y="2.75" dx="1.1" dy="2.5" layer="1"/>
+<smd name="VBUS" x="3.5" y="2.75" dx="1.1" dy="2.5" layer="1"/>
+<hole x="-2.25" y="0" drill="1"/>
+<hole x="2.25" y="0" drill="1"/>
+<wire x1="-6" y1="4" x2="-6" y2="1.5" width="0.127" layer="20"/>
+<wire x1="-6" y1="1.5" x2="-5.5" y2="1" width="0.127" layer="20" curve="-90"/>
+<wire x1="-5.5" y1="1" x2="-5.5" y2="-1" width="0.127" layer="20"/>
+<wire x1="-5.5" y1="-1" x2="-6" y2="-1.5" width="0.127" layer="20" curve="-90"/>
+<wire x1="-6" y1="-1.5" x2="-6" y2="-2.65" width="0.127" layer="20"/>
+<wire x1="-6" y1="-2.65" x2="6" y2="-2.65" width="0.127" layer="20"/>
+<wire x1="6" y1="-2.65" x2="6" y2="-1.5" width="0.127" layer="20"/>
+<wire x1="6" y1="-1.5" x2="5.5" y2="-1" width="0.127" layer="20" curve="-90"/>
+<wire x1="5.5" y1="-1" x2="5.5" y2="1" width="0.127" layer="20"/>
+<wire x1="5.5" y1="1" x2="6" y2="1.6" width="0.127" layer="20" curve="-95.710593"/>
+<wire x1="6" y1="1.6" x2="6" y2="4" width="0.127" layer="20"/>
+<smd name="GND1" x="-4.9" y="0" dx="1" dy="2" layer="16"/>
+<smd name="GND2" x="4.9" y="0" dx="1" dy="2" layer="16"/>
+</package>
 </packages>
 <symbols>
 <symbol name="FT232">
@@ -245,17 +266,6 @@
 <wire x1="-12.7" y1="-22.86" x2="-12.7" y2="22.86" width="0.254" layer="94"/>
 <text x="-12.7" y="23.368" size="1.778" layer="95">&gt;NAME</text>
 <text x="-4.064" y="23.368" size="1.778" layer="96">&gt;VALUE</text>
-</symbol>
-<symbol name="USB">
-<pin name="VBUS" x="12.7" y="5.08" length="middle" direction="sup" rot="R180"/>
-<pin name="D-" x="12.7" y="2.54" length="middle" rot="R180"/>
-<pin name="D+" x="12.7" y="0" length="middle" rot="R180"/>
-<pin name="GND" x="12.7" y="-5.08" length="middle" direction="sup" rot="R180"/>
-<wire x1="-7.62" y1="7.62" x2="7.62" y2="7.62" width="0.254" layer="94"/>
-<wire x1="7.62" y1="7.62" x2="7.62" y2="-7.62" width="0.254" layer="94"/>
-<wire x1="7.62" y1="-7.62" x2="-7.62" y2="-7.62" width="0.254" layer="94"/>
-<text x="-2.54" y="-7.62" size="5.08" layer="94" rot="R90">USB</text>
-<text x="7.62" y="10.16" size="1.778" layer="95">&gt;NAME</text>
 </symbol>
 <symbol name="CON4">
 <pin name="VCC" x="-5.08" y="5.08" length="middle"/>
@@ -320,6 +330,17 @@
 <pin name="1" x="0" y="2.54" visible="off" length="short" direction="pas" swaplevel="1" rot="R270"/>
 <pin name="2" x="0" y="-5.08" visible="off" length="short" direction="pas" swaplevel="1" rot="R90"/>
 </symbol>
+<symbol name="USB">
+<pin name="VBUS" x="12.7" y="5.08" length="middle" direction="sup" rot="R180"/>
+<pin name="D-" x="12.7" y="2.54" length="middle" rot="R180"/>
+<pin name="D+" x="12.7" y="0" length="middle" rot="R180"/>
+<pin name="GND" x="12.7" y="-5.08" length="middle" direction="sup" rot="R180"/>
+<wire x1="-7.62" y1="7.62" x2="7.62" y2="7.62" width="0.254" layer="94"/>
+<wire x1="7.62" y1="7.62" x2="7.62" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="7.62" y1="-7.62" x2="-7.62" y2="-7.62" width="0.254" layer="94"/>
+<text x="-2.54" y="-7.62" size="5.08" layer="94" rot="R90">USB</text>
+<text x="7.62" y="10.16" size="1.778" layer="95">&gt;NAME</text>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="FT232" prefix="U">
@@ -357,24 +378,6 @@
 <connect gate="A" pin="USBDP" pad="15"/>
 <connect gate="A" pin="VCC" pad="20"/>
 <connect gate="A" pin="VCCIO" pad="4"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="USB" prefix="J">
-<gates>
-<gate name="A" symbol="USB" x="0" y="0" addlevel="always"/>
-</gates>
-<devices>
-<device name="" package="USB_SMD">
-<connects>
-<connect gate="A" pin="D+" pad="D+"/>
-<connect gate="A" pin="D-" pad="D-"/>
-<connect gate="A" pin="GND" pad="GND"/>
-<connect gate="A" pin="VBUS" pad="VCC"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -482,6 +485,35 @@
 </device>
 </devices>
 </deviceset>
+<deviceset name="USB" prefix="J">
+<gates>
+<gate name="A" symbol="USB" x="0" y="0" addlevel="always"/>
+</gates>
+<devices>
+<device name="" package="USB_SMD">
+<connects>
+<connect gate="A" pin="D+" pad="D+"/>
+<connect gate="A" pin="D-" pad="D-"/>
+<connect gate="A" pin="GND" pad="GND"/>
+<connect gate="A" pin="VBUS" pad="VCC"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="A" package="USB_A">
+<connects>
+<connect gate="A" pin="D+" pad="D+"/>
+<connect gate="A" pin="D-" pad="D-"/>
+<connect gate="A" pin="GND" pad="GND GND1 GND2"/>
+<connect gate="A" pin="VBUS" pad="VBUS"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
 </devicesets>
 </library>
 <library name="supply1">
@@ -547,7 +579,6 @@
 </classes>
 <parts>
 <part name="U1" library="FT232" deviceset="FT232" device=""/>
-<part name="J1" library="FT232" deviceset="USB" device=""/>
 <part name="J2" library="FT232" deviceset="CON" device=""/>
 <part name="Y1" library="FT232" deviceset="CRYSTAL" device=""/>
 <part name="R1" library="FT232" deviceset="RESISTOR" device="0402"/>
@@ -574,6 +605,7 @@
 <part name="GND6" library="supply1" deviceset="GND" device=""/>
 <part name="GND7" library="supply1" deviceset="GND" device=""/>
 <part name="GND8" library="supply1" deviceset="GND" device=""/>
+<part name="J1" library="FT232" deviceset="USB" device="A"/>
 </parts>
 <sheets>
 <sheet>
@@ -598,7 +630,6 @@
 </plain>
 <instances>
 <instance part="U1" gate="A" x="137.16" y="101.6"/>
-<instance part="J1" gate="A" x="48.26" y="111.76"/>
 <instance part="J2" gate="A" x="236.22" y="111.76"/>
 <instance part="Y1" gate="A" x="93.98" y="93.98"/>
 <instance part="R1" gate="A" x="91.44" y="114.3"/>
@@ -625,18 +656,19 @@
 <instance part="GND6" gate="1" x="187.96" y="88.9"/>
 <instance part="GND7" gate="1" x="205.74" y="88.9"/>
 <instance part="GND8" gate="1" x="99.06" y="121.92" rot="R270"/>
+<instance part="J1" gate="A" x="48.26" y="111.76"/>
 </instances>
 <busses>
 </busses>
 <nets>
-<net name="N$1" class="0">
+<net name="D_N" class="0">
 <segment>
 <pinref part="R1" gate="A" pin="2"/>
 <pinref part="U1" gate="A" pin="USBDM"/>
 <wire x1="96.52" y1="114.3" x2="119.38" y2="114.3" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$2" class="0">
+<net name="D_P" class="0">
 <segment>
 <pinref part="U1" gate="A" pin="USBDP"/>
 <pinref part="R2" gate="A" pin="2"/>
@@ -646,15 +678,15 @@
 <net name="N$3" class="0">
 <segment>
 <pinref part="R1" gate="A" pin="1"/>
-<pinref part="J1" gate="A" pin="D-"/>
 <wire x1="86.36" y1="114.3" x2="60.96" y2="114.3" width="0.1524" layer="91"/>
+<pinref part="J1" gate="A" pin="D-"/>
 </segment>
 </net>
 <net name="N$4" class="0">
 <segment>
-<pinref part="J1" gate="A" pin="D+"/>
 <pinref part="R2" gate="A" pin="1"/>
 <wire x1="60.96" y1="111.76" x2="86.36" y2="111.76" width="0.1524" layer="91"/>
+<pinref part="J1" gate="A" pin="D+"/>
 </segment>
 </net>
 <net name="N$5" class="0">
@@ -752,10 +784,10 @@
 </net>
 <net name="GND" class="0">
 <segment>
-<pinref part="J1" gate="A" pin="GND"/>
 <pinref part="GND1" gate="1" pin="GND"/>
 <wire x1="60.96" y1="106.68" x2="66.04" y2="106.68" width="0.1524" layer="91"/>
 <wire x1="66.04" y1="106.68" x2="66.04" y2="101.6" width="0.1524" layer="91"/>
+<pinref part="J1" gate="A" pin="GND"/>
 </segment>
 <segment>
 <pinref part="Z1" gate="A" pin="K"/>
@@ -814,22 +846,6 @@
 </net>
 <net name="+5V" class="0">
 <segment>
-<pinref part="J1" gate="A" pin="VBUS"/>
-<wire x1="60.96" y1="116.84" x2="116.84" y2="116.84" width="0.1524" layer="91"/>
-<wire x1="116.84" y1="116.84" x2="116.84" y2="119.38" width="0.1524" layer="91"/>
-<pinref part="U1" gate="A" pin="VCCIO"/>
-<wire x1="116.84" y1="119.38" x2="116.84" y2="121.92" width="0.1524" layer="91"/>
-<wire x1="116.84" y1="121.92" x2="119.38" y2="121.92" width="0.1524" layer="91"/>
-<pinref part="U1" gate="A" pin="VCC"/>
-<wire x1="119.38" y1="119.38" x2="116.84" y2="119.38" width="0.1524" layer="91"/>
-<junction x="116.84" y="119.38"/>
-<pinref part="C3" gate="A" pin="1"/>
-<wire x1="114.3" y1="121.92" x2="116.84" y2="121.92" width="0.1524" layer="91"/>
-<junction x="116.84" y="121.92"/>
-<pinref part="P+1" gate="1" pin="+5V"/>
-<wire x1="116.84" y1="127" x2="116.84" y2="121.92" width="0.1524" layer="91"/>
-</segment>
-<segment>
 <pinref part="R5" gate="A" pin="2"/>
 <wire x1="172.72" y1="121.92" x2="172.72" y2="124.46" width="0.1524" layer="91"/>
 <wire x1="172.72" y1="124.46" x2="180.34" y2="124.46" width="0.1524" layer="91"/>
@@ -850,6 +866,22 @@
 <wire x1="205.74" y1="116.84" x2="205.74" y2="114.3" width="0.1524" layer="91"/>
 <wire x1="231.14" y1="116.84" x2="205.74" y2="116.84" width="0.1524" layer="91"/>
 <junction x="205.74" y="116.84"/>
+</segment>
+<segment>
+<wire x1="60.96" y1="116.84" x2="116.84" y2="116.84" width="0.1524" layer="91"/>
+<wire x1="116.84" y1="116.84" x2="116.84" y2="119.38" width="0.1524" layer="91"/>
+<pinref part="U1" gate="A" pin="VCCIO"/>
+<wire x1="116.84" y1="119.38" x2="116.84" y2="121.92" width="0.1524" layer="91"/>
+<wire x1="116.84" y1="121.92" x2="119.38" y2="121.92" width="0.1524" layer="91"/>
+<pinref part="U1" gate="A" pin="VCC"/>
+<wire x1="119.38" y1="119.38" x2="116.84" y2="119.38" width="0.1524" layer="91"/>
+<junction x="116.84" y="119.38"/>
+<pinref part="C3" gate="A" pin="1"/>
+<wire x1="114.3" y1="121.92" x2="116.84" y2="121.92" width="0.1524" layer="91"/>
+<junction x="116.84" y="121.92"/>
+<pinref part="P+1" gate="1" pin="+5V"/>
+<wire x1="116.84" y1="127" x2="116.84" y2="121.92" width="0.1524" layer="91"/>
+<pinref part="J1" gate="A" pin="VBUS"/>
 </segment>
 </net>
 </nets>
