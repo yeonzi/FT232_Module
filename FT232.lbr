@@ -38,7 +38,7 @@
 <layer number="42" name="bRestrict" color="1" fill="10" visible="yes" active="yes"/>
 <layer number="43" name="vRestrict" color="2" fill="10" visible="yes" active="yes"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
-<layer number="45" name="Holes" color="7" fill="1" visible="no" active="yes"/>
+<layer number="45" name="Holes" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
 <layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
 <layer number="48" name="Document" color="7" fill="1" visible="yes" active="yes"/>
@@ -205,6 +205,27 @@
 <wire x1="-6" y1="-5" x2="-6" y2="4.238" width="0.127" layer="20"/>
 <wire x1="-6" y1="4.238" x2="6" y2="4.238" width="0.127" layer="20"/>
 <wire x1="6" y1="4.238" x2="6" y2="-5" width="0.127" layer="20"/>
+</package>
+<package name="USB_A">
+<smd name="GND" x="-3.5" y="2.75" dx="1.1" dy="2.5" layer="1"/>
+<smd name="D+" x="-1" y="2.75" dx="1.1" dy="2.5" layer="1"/>
+<smd name="D-" x="1" y="2.75" dx="1.1" dy="2.5" layer="1"/>
+<smd name="VBUS" x="3.5" y="2.75" dx="1.1" dy="2.5" layer="1"/>
+<hole x="-2.25" y="0" drill="1"/>
+<hole x="2.25" y="0" drill="1"/>
+<wire x1="-6" y1="4" x2="-6" y2="1.5" width="0.127" layer="20"/>
+<wire x1="-6" y1="1.5" x2="-5.5" y2="1" width="0.127" layer="20" curve="-90"/>
+<wire x1="-5.5" y1="1" x2="-5.5" y2="-1" width="0.127" layer="20"/>
+<wire x1="-5.5" y1="-1" x2="-6" y2="-1.5" width="0.127" layer="20" curve="-90"/>
+<wire x1="-6" y1="-1.5" x2="-6" y2="-2.65" width="0.127" layer="20"/>
+<wire x1="-6" y1="-2.65" x2="6" y2="-2.65" width="0.127" layer="20"/>
+<wire x1="6" y1="-2.65" x2="6" y2="-1.5" width="0.127" layer="20"/>
+<wire x1="6" y1="-1.5" x2="5.5" y2="-1" width="0.127" layer="20" curve="-90"/>
+<wire x1="5.5" y1="-1" x2="5.5" y2="1" width="0.127" layer="20"/>
+<wire x1="5.5" y1="1" x2="6" y2="1.6" width="0.127" layer="20" curve="-95.710593"/>
+<wire x1="6" y1="1.6" x2="6" y2="4" width="0.127" layer="20"/>
+<smd name="GND1" x="-4.9" y="0" dx="1" dy="2" layer="16"/>
+<smd name="GND2" x="4.9" y="0" dx="1" dy="2" layer="16"/>
 </package>
 </packages>
 <symbols>
@@ -439,6 +460,17 @@
 <connect gate="A" pin="D-" pad="D-"/>
 <connect gate="A" pin="GND" pad="GND"/>
 <connect gate="A" pin="VBUS" pad="VCC"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="A" package="USB_A">
+<connects>
+<connect gate="A" pin="D+" pad="D+"/>
+<connect gate="A" pin="D-" pad="D-"/>
+<connect gate="A" pin="GND" pad="GND GND1 GND2"/>
+<connect gate="A" pin="VBUS" pad="VBUS"/>
 </connects>
 <technologies>
 <technology name=""/>
